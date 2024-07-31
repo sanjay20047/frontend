@@ -1,0 +1,91 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+/* General Styles */
+.how-it-works {
+  font-family: 'Roboto', sans-serif;
+  background: rgb(21, 20, 20); /* White background for the entire container */
+  color: #333;
+  padding: 50px;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  display: flex;
+  justify-content: center;
+}
+
+.how-it-works:hover {
+  transform: scale(1.02);
+}
+
+/* Content Container Styles */
+.content-container {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Image Styles */
+.how-it-works-image {
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+/* Text Container Styles */
+.text-container {
+  max-width: 50%;
+  margin-left: auto; /* Align the text container to the right */
+  text-align: right; /* Ensure text inside is aligned to the right */
+}
+
+/* Section Title Styles */
+.how-it-works h2.section-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: rgba(202, 20, 202, 0.932);
+  margin: 0 0 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin-left: 20px;
+}
+
+/* Section Description Styles */
+.how-it-works p.section-description {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #fff;
+  background:rgb(21, 20, 20); /* White background for the description box */
+  padding: 20px;
+  margin: 0; /* Remove the left margin */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .how-it-works-image {
+    max-width: 80%;
+    margin: 0 auto 20px;
+  }
+
+  .text-container {
+    max-width: 80%;
+    margin: 0 auto; /* Center the text container */
+    text-align: center; /* Ensure text inside is centered */
+  }
+
+  .how-it-works h2.section-title {
+    font-size: 1.75rem;
+  }
+
+  .how-it-works p.section-description {
+    font-size: 1rem;
+  }
+}

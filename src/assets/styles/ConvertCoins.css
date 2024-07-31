@@ -1,0 +1,88 @@
+.convert-coins {
+  font-family: 'Arial', sans-serif;
+  color:#fff;
+  padding: 20px;
+  background: #3f3e3e;
+}
+
+.convert-form {
+  background: #000000;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  border: 2px solid #05d50c;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  width: calc(100% - 22px);
+  font-size: 16px;
+}
+
+.action-button {
+  background: linear-gradient(135deg, #dd54fc, #d541f3);
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+.action-button:hover {
+  background: linear-gradient(135deg, #f19ef4, #4CAF50);
+}
+
+.payment-options {
+  margin-top: 20px;
+  color: #fff;
+}
+
+.payment-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.payment-card {
+  display: flex;
+  align-items: center;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.payment-card:hover {
+  border-color: #4CAF50;
+}
+
+.payment-card input {
+  margin-right: 10px;
+}
+
+.payment-card label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.payment-card img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.payment-card span {
+  font-size: 18px;
+  font-weight: bold;
+}

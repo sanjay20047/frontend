@@ -1,0 +1,205 @@
+/* Resident.css */
+.resident-container {
+  width: 100%;
+  height: 100%;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  box-sizing: border-box;
+  background-color: black;
+}
+.resident-content{
+  max-width: 100%;
+}
+
+.resident-text {
+  text-align: left;
+  padding-bottom: 70rem;
+}
+
+
+.text-and-image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.resident-text {
+  text-align: left;
+  padding-bottom: 7rem;
+  color: #ffffff;
+}
+.resident-text p{
+  padding-bottom: 2rem;
+  font-size: large;
+  line-height: 1.8rem;
+  max-width: 70rem;
+  color: #ffffff;
+}
+.resident-text h2{
+  color: rgb(208, 10, 248);
+  font-weight: 800;
+  font-size: 3.8rem;
+}
+
+.resident-image {
+  max-width: 45%;
+}
+
+.resident-image img {
+width: 40rem;
+height: 20rem;
+  padding-left: 1rem;
+}
+.contact-service-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgb(189, 29, 184);
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 10rem;
+}
+.start-service-button {
+  margin-top: 10px;
+  padding: 15px 20px;
+  background-color: rgb(189, 16, 178);
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 10rem;
+}
+
+.additional-info-container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #000000;
+}
+
+.additional-info-container h3 {
+  margin-top: 2px;
+  font-size: 2rem;
+  color: rgb(154, 24, 180);
+  text-align: center;
+}
+
+.additional-info-container h4 {
+  margin-top: 60px;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: rgb(174, 22, 201);
+}
+
+.additional-info-container p {
+  margin-bottom: 15px;
+  line-height: 1.6rem;
+  font-size: large;
+  color: #333;
+  display: flex;
+  align-items: start;
+}
+
+.additional-info-container .info-image {
+  width: 100rem;
+  height: 20rem;
+  margin-right: 1px;
+}
+
+
+.form-container {
+  background-color: #000000;
+  margin: auto; 
+  width: 70rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding-bottom: 1rem;
+}
+.form-container h3{
+  padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px 30px 8px 8px; /* Adjust padding for the icon */
+  box-sizing: border-box;
+}
+
+.form-group .input-icon {
+  position: absolute;
+  top: 45px;
+  right: 10px;
+  transform: translateY(-50%);
+  color: green;
+}
+
+.form-group-half {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group-half .form-group {
+  width: 48%;
+}
+.form-container-wrapper {
+  margin-bottom: 50px; /* Add margin-bottom for spacing */
+}
+.form sb{
+  padding-right: 10rem;
+}
+
+.submit-button {
+  padding-right: 10px;
+  background-color: rgb(193, 23, 255);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  width: 20rem;
+}
+.checkbox-group {
+  align-items: start;
+}
+
+
+@media (max-width: 768px) {
+  .text-and-image {
+    flex-direction: column; /* Stack elements vertically on small screens */
+  }
+
+  .resident-text {
+    width: 100%;
+    margin-bottom: 20px; /* Add margin for spacing on small screens */
+    padding-right: 0;
+  }
+
+  .resident-image img {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .form-group-half {
+    flex-direction: column;
+  }
+
+  .form-group-half .form-group {
+    width: 100%;
+  }
+}

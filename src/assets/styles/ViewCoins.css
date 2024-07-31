@@ -1,0 +1,98 @@
+.view-coins-page {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  padding: 20px;
+  background: #000000;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px; /* Adjust gap as needed */
+  position: relative; /* Ensure correct positioning context */
+}
+
+.left-side {
+  position: sticky;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Adjust gap as needed */
+  width: 30%; /* Set a fixed width for the left side */
+}
+
+.coin-display {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%; /* Ensure it takes the full width of the left side */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.coin-graphic {
+  font-size: 48px;
+  color: #4CAF50;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.coin-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.coin-buttons button {
+  background: #e72bdd;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px 0; /* Adjust margin for spacing between buttons */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%; /* Ensure buttons take the full width */
+}
+
+.coin-buttons button:hover {
+  background: #de3ff0;
+}
+
+.activity-container {
+  background: #000000;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 65%; /* Ensure it takes the remaining space */
+  flex-basis: 65%; /* Adjust flex-basis to control the width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding-top: 10px; /* Reduce padding at the top */
+  margin-left: 10px;
+  margin-bottom: 80px; /* Space for ConvertCoins section */
+}
+
+.activity-container h3 {
+  text-align: center;
+  margin-top: 0; /* Remove top margin */
+}
+
+.transaction {
+  background: #a28aa9;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ConvertCoins section */
+
+.convert-coins-container {
+  background: #000000;
+  border-radius: 10px;
+  padding: 10px; /* Reduced padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Adjusted to be relative to parent */
+  margin-top: 20px; /* Add space from other content */
+  width: calc(100% - 40px); /* Ensure it does not exceed container width */
+  max-width: 600px; /* Reduced max-width */
+}

@@ -1,0 +1,60 @@
+.categories-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  margin-top: 200px;
+  gap: 40px; /* Increase space among the containers */
+}
+
+.category-box {
+  width: 30%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  transition: border-color 0.3s, border-width 0.3s; /* Smooth transition for border color and width */
+  text-decoration: none;
+}
+
+.category-box:hover {
+  border-color: #b532dc; /* Green border color on hover */
+  border-width: 3px; /* Increase border width on hover */
+}
+
+.image-container {
+  position: absolute;
+  top: -110px; /* Adjusted to fit larger image */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.circle-image {
+  width: 200px; /* Increased width */
+  height: 200px; /* Increased height */
+  border-radius: 50%;
+}
+
+h3 {
+  margin-top: 120px; /* Adjusted to avoid overlap with larger image */
+  color: #bc07b9; /* Green color for the title */
+  font-size: 1.75rem; /* Increased font size for title */
+  font-weight: bold; /* Make the title bold */
+}
+
+.category-box h3::after {
+  content: ' ➔'; /* Arrow mark after the category title */
+  font-size: 1.5rem; /* Increase the size of the arrow */
+  color: #089827; /* Color for the arrow mark */
+  margin-left: 10px; /* Add space between the title and the arrow */
+}
+
+.description {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #761818; /* Dark grey color for description */
+}

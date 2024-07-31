@@ -1,0 +1,103 @@
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  width: 100%;
+  background-color: black;
+}
+
+#app .search-wrapper {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+#app .search-wrapper label {
+  position: absolute;
+  font-size: 14px;
+  color: rgba(196, 20, 254, 0.6); /* Changed to green */
+  top: 12px;
+  left: 12px;
+  transition: .2s all ease-in-out;
+  pointer-events: none;
+}
+
+#app .search-wrapper input {
+  width: 100%;
+  padding: 14px 12px;
+  color: #e032e3;
+  border: 1px solid rgba(0, 128, 0, .15); /* Changed to green */
+  border-radius: 4px;
+  transition: .2s all ease-in-out;
+  background: #141313; /* Changed to white */
+  font-size: 16px;
+}
+
+#app .search-wrapper input:focus {
+  outline: none;
+  border-color: #b326ea; /* Changed to green */
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 128, 0, .1); /* Changed to green */
+}
+
+#app .search-wrapper input:focus + label,
+#app .search-wrapper input:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  color: #ac3ef5; /* Changed to green */
+  background: rgb(0, 0, 0);
+  padding: 0 4px;
+}
+
+#app .search-wrapper input::placeholder {
+  color: transparent;
+}
+
+#app .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding-top: 12px;
+}
+
+#app .card {
+  box-shadow: rgba(0, 128, 0, 0.117647) 0px 1px 6px, rgba(0, 128, 0, 0.117647) 0px 1px 4px; /* Changed to green */
+  width: 220px; 
+  margin: 16px; 
+  transition: .15s all ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#app .card:hover {
+  transform: scale(1.1);
+}
+
+#app .card a {
+  text-decoration: none;
+  padding: 12px;
+  color: #b830f7; /* Changed to green */
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#app .card img {
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+#app .card small {
+  font-size: 12px;
+  padding: 4px;
+  color: #fff;
+}

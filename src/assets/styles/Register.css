@@ -1,0 +1,97 @@
+/* src/assets/styles/Profile.css */
+
+:root {
+  --background: #ffffff; /* White background */
+  --foreground: #333333; /* Dark text color */
+  --muted: #f0f0f0; /* Light grey for side nav and cards */
+  --border: #cccccc; /* Light grey for borders */
+  --hover: #e0e0e0; /* Slightly darker grey for hover */
+  --primary: #4CAF50; /* Green for primary actions */
+  --primary-foreground: #ffffff; /* White text on primary actions */
+  --radius: 8px; /* Border radius */
+}
+
+.profile-container {
+  display: flex;
+  height: 100vh;
+  background-color: var(--background); /* Use theme background color */
+  color: var(--foreground); /* Use theme text color */
+}
+
+.profile-sidenav {
+  width: 250px;
+  background-color: var(--muted); /* Use theme muted color */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  position: fixed; /* Make the sidebar fixed */
+  top: 100;
+  /* left: 20; */
+  margin-right: 50px;
+  height: 100%; /* Make it full height */
+}
+
+.profile-sidenav h2 {
+  margin-top: 0;
+}
+
+.profile-sidenav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-sidenav li {
+  padding: 15px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border); /* Use theme border color */
+}
+
+.profile-sidenav li:hover {
+  background-color: var(--hover); /* Use theme hover color */
+}
+
+.profile-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 270px; /* Add margin to avoid overlap with fixed sidebar */
+}
+
+.profile-details,
+.profile-orders,
+.profile-wishlist,
+.profile-notifications {
+  background-color: var(--muted); /* Use theme muted color */
+  padding: 20px;
+  border-radius: var(--radius); /* Use theme border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 2rem;
+}
+
+.address-card {
+  background-color: var(--background); /* Use theme background color */
+  padding: 15px;
+  border: 1px solid var(--border); /* Use theme border color */
+  border-radius: var(--radius); /* Use theme border radius */
+  margin-bottom: 10px;
+}
+
+.edit-button,
+.add-address-button,
+.edit-button {
+  background-color: var(--primary); /* Use theme primary color */
+  color: var(--primary-foreground); /* Use theme primary text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius); /* Use theme border radius */
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.edit-button:hover,
+.add-address-button:hover,
+.edit-button:hover {
+  background-color: #45a049; /* Slightly darker green for hover effect */
+}

@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+.my-submission {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000;
+  padding: 40px 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.section {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #232222;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  color: #9c2cf1;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.section p {
+  text-align: center;
+  color: #9c2cf1;
+}
+
+.submissions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.submission-card {
+  background-color: #000000;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submission-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.submission-image {
+  width: 60%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.submission-content {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.submission-content h3 {
+  margin: 0;
+  color: #9c2cf1;
+  font-size: 20px;
+}
+
+.submission-content p {
+  margin: 5px 0;
+  color: #fff;
+}
+
+.submission-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 5px;
+  padding: 0 10px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.detail-item p {
+  margin-left: 10px;
+  color: #fff;
+  width: calc(100% - 30px); /* Ensure enough space for the icon */
+  text-align: left;
+}
+
+.submission-date p {
+  margin: 0;
+  color: #fff;
+  text-align: right;
+  width: 100%;
+}
+
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+.my-submission {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f1f8e9;
+  padding: 40px 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.section {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+.section h2 {
+  color: #388e3c;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.section p {
+  text-align: center;
+  color: #757575;
+}
+
+.submissions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.submission-card {
+  background-color: #e8f5e9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.submission-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.submission-image {
+  width: 40%;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.submission-content {
+  flex: 1;
+  text-align: left;
+}
+
+.submission-content h3 {
+  margin: 0;
+  color: #2e7d32;
+  font-size: 20px;
+}
+
+.submission-content p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.submission-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 5px;
+  padding: 0 10px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  width: 100%;
+}
+
+.detail-item p {
+  margin-left: 10px;
+  color: #555555;
+  text-align: left;
+}
+
+.submission-date p {
+  margin: 0;
+  color: #757575;
+  text-align: right;
+  width: 100%;
+} */

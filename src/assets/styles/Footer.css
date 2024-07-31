@@ -1,0 +1,66 @@
+.footer {
+    background:rgb(21, 20, 20); /* Light green background */
+    color: #b01ce1; /* Dark grey text */
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    padding: 10px 20px;
+  }
+  
+  .logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff; /* Dark green for logo */
+  }
+  
+  .logo-text span {
+    color: #b01ce1; /* Dark grey for 'It' */
+  }
+  
+  .contact span {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .footer-section.links ul {
+    list-style: none;
+  }
+  
+  .footer-section.links ul a {
+    text-decoration: none;
+    color: #fff; /* Dark green for links */
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .footer-section.links ul a:hover {
+    color: #b01ce1; /* Darker green on hover */
+  }
+  
+  .social-links a {
+    color: #fff; /* Dark green for social media icons */
+    margin: 0 10px;
+    font-size: 1.5rem;
+  }
+  
+  .social-links a:hover {
+    color: #b01ce1; /* Darker green on hover */
+  }
+  
+  .footer-bottom {
+    background: #fff; /* Slightly darker green */
+    color: #b01ce1; /* Dark grey text */
+    padding: 10px 0;
+    font-size: 0.9rem;
+  }
+  

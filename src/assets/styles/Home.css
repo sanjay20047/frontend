@@ -1,0 +1,129 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+.home {
+  font-family: Arial, sans-serif;
+  padding: 50px;
+  background-color: #000000; /* Light grey background */
+  color: #fff; /* Dark grey text color */
+}
+
+/* Hero Container Styles */
+.hero-container {
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack content vertically */
+  align-items: flex-end; /* Align items to the start (left) */
+  justify-content: center; /* Center content vertically */
+  text-align: right; /* Align text to the left */
+  padding: 120px;
+  background-image: url('../../assets/images/home9.jpg'); /* Set your background image here */
+  background-size: cover; /* Ensure the image covers the container */
+  background-position: center; /* Center the background image */
+  color: rgba(220, 218, 220, 0.932); /* White text color for contrast */
+  border-radius: 10px; /* Optional: rounded corners for the container */
+  margin-bottom: 20px; /* Space below the container */
+  max-width: 100%; /* Ensure it doesn’t overflow */
+}
+
+.hero-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-container p.slogan {
+  font-size: 1.75rem; /* Increased font size for slogan */
+  font-weight: bold;
+  margin: 0; /* Remove default margins */
+  color:rgba(236, 29, 254, 0.71);
+}
+
+/* Description Styles */
+.home p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 20px auto; /* Center horizontally with bottom margin */
+  color: #fff; /* Medium grey color for description text */
+  padding-left: 20px; /* Add left padding to align with the text */
+  text-align: left; /* Ensure text alignment is to the left */
+}
+
+/* Description Container Styles */
+.des {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; /* Space between description and buttons */
+  margin-top: 50px;
+ }
+
+.des p {
+  flex: 1; 
+  margin: 0;
+  font-family: 'Roboto' sans-serif;
+  font-weight: lighter;
+  
+} 
+
+/* Home Buttons Styles */
+.home-buttons {
+  display: flex; /* Use Flexbox for horizontal alignment */
+  justify-content: flex-start; /* Align buttons to the start (left) */
+  gap: 40px; /* Space between buttons */
+  margin-top: 20px;
+  margin-right: 200px;
+}
+
+.home-button {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: #9c2cf1; /* Green background for buttons */
+  color: white;
+  text-decoration: none;
+  font-size: 1.125rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.home-button:hover {
+  background-color: #06761d; /* Darker green on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .home {
+      padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .hero-container h1 {
+      font-size: 2rem;
+  }
+
+  .hero-container p.slogan {
+      font-size: 1.5rem; /* Adjusted size for smaller screens */
+  }
+
+  .home p {
+      font-size: 1rem;
+  }
+
+  .home h2.section-title {
+      font-size: 1.5rem; /* Adjusted size for smaller screens */
+  }
+
+  .home p.section-description {
+      font-size: 1rem; /* Adjusted size for smaller screens */
+  }
+
+  .home-button {
+      font-size: 1rem; /* Adjusted button size for smaller screens */
+      padding: 4px 16px;
+  }
+}
+.submitwaste-section {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-top: 1px solid #ddd;
+}
+
+.submitwaste-section h2 {
+  margin-top: 0;
+}

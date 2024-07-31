@@ -1,0 +1,134 @@
+/* General Body Styles */
+.footerbody {
+    display: grid;
+    grid-template-rows: 1fr 10rem auto;
+    grid-template-areas: "main" "." "footer";
+    overflow-x: hidden;
+    background: #F5F7FA;
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Footer Container */
+.footer {
+    position: relative;
+    z-index: 1;
+    --footer-background: #d876d3;
+    display: grid;
+    grid-area: footer;
+    min-height: 12rem;
+}
+
+/* Footer Content */
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    background: var(--footer-background);
+    position: relative; /* Ensure content is above bubbles */
+    z-index: 2; /* Ensure content is above bubbles */
+}
+
+/* Footer Sections */
+.footer-section {
+    color: #F5F7FA;
+}
+
+.footer-section h1,
+.footer-section h2 {
+    color: white;
+}
+
+.footer-section p,
+.footer-section span {
+    color: #F5F7FA;
+}
+
+/* Bubble Effect Styles */
+.footer .bubbles {
+    position: absolute;
+    top: -3rem; /* Move bubbles slightly above the footer */
+    left: 0;
+    right: 0;
+    height: 12rem; /* Cover the footer height */
+    background: var(--footer-background);
+    filter: url("#blob");
+    z-index: 1; /* Place bubbles behind the content */
+}
+
+.footer .bubble {
+    position: absolute;
+    left: var(--position, 50%);
+    background: var(--footer-background);
+    border-radius: 100%;
+    animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
+               bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+    transform: translate(-50%, 100%);
+}
+
+/* Bubble Keyframes */
+@keyframes bubble-size {
+    0%, 75% {
+        width: var(--size, 4rem);
+        height: var(--size, 4rem);
+    }
+    100% {
+        width: 0rem;
+        height: 0rem;
+    }
+}
+
+@keyframes bubble-move {
+    0% {
+        bottom: -4rem;
+    }
+    100% {
+        bottom: var(--distance, 10rem);
+    }
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    padding: 1rem;
+    background: var(--footer-background);
+    color: #F5F7FA;
+    text-align: center;
+    font-size: .75rem;
+    z-index: 2; /* Ensure bottom is above bubbles */
+}
+
+/* Social Media Icons */
+.social-links a {
+    color: #F5F7FA;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.social-links a:hover {
+    color: #FFC107; /* Adjust the hover color if needed */
+}
+
+/* Contact and Links Section */
+.contact span {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+ul li a {
+    color: #F5F7FA;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
