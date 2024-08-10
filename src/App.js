@@ -23,6 +23,7 @@ import AddAddress from './components/user/AddAddress'; // Import AddAddress comp
 import Payment from './components/user/Payment';
 import Feedback from './components/user/Feedback';
 import Job from './components/user/Job';
+import ContactUs from './components/static/ContactUs';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false); // Placeholder for login state
@@ -62,6 +63,7 @@ const App = () => {
           <Route path="/payment" element={<Payment />} />
           <Route path="/feedback" element={<Feedback />} />   
           <Route path="/job" element={<Job />} />  
+          <Route path="/contactus" element={<ContactUs />} />  
            {/* Add this route */}
         </Routes>
       </div>

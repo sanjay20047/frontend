@@ -6,9 +6,9 @@ const SecondNavbar = () => {
     return (
         <div className="second-navbar">
             <ul className="second-nav-items">
-                <li><a href="/job">Apply Jobs</a></li>
+                <li><Link to="/job">Apply Jobs</Link></li>
                 <li><Link to="/feedback">Feedback</Link></li>
-                <li><a href="#section3">Contact Us</a></li>
+                <li><Link to="/contactus">Contact Us</Link></li>
             </ul>
         </div>
     );
