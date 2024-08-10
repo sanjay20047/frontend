@@ -4,7 +4,7 @@
 /* General Styles */
 .how-it-works {
   font-family: 'Roboto', sans-serif;
-  background: rgb(21, 20, 20); /* White background for the entire container */
+  background: rgb(21, 20, 20); /* Dark background for the container */
   color: #333;
   padding: 50px;
   margin-top: 50px;
@@ -50,7 +50,6 @@
   margin: 0 0 20px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   text-align: left;
-  margin-left: 20px;
 }
 
 /* Section Description Styles */
@@ -58,9 +57,20 @@
   font-size: 1.25rem;
   line-height: 1.8;
   color: #fff;
-  background:rgb(21, 20, 20); /* White background for the description box */
+  background: rgb(21, 20, 20); /* Dark background for the description box */
   padding: 20px;
-  margin: 0; /* Remove the left margin */
+  margin: 0;
+}
+
+/* Button Styles */
+.section-description button {
+  background-color: rgb(255, 255, 255);
+  width: 100px;
+  height: 50px;
+  border-radius: 30px;
+  color: black;
+  border: none;
+  cursor: pointer;
 }
 
 /* Responsive Styles */

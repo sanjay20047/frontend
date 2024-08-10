@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import '../../assets/styles/Profile.css'; // Ensure you create this CSS file
+import '../../assets/styles/Profile.css';
 import { useNavigate } from 'react-router-dom';
+import { CSSTransition } from 'react-transition-group';
 
 const Profile = () => {
     const [user, setUser] = useState({
-        email: 'john.doe@example.com',
-        firstName: 'John',
-        lastName: 'Doe',
-        phone: '123-456-7890',
+        email: 'sanjay@example.com',
+        firstName: 'Sanjay',
+        lastName: 'S',
+        phone: '5737357278',
         addresses: [
             {
                 street: '123 Main St',
@@ -20,6 +21,8 @@ const Profile = () => {
             }
         ]
     });
+
+    const [profilePicture, setProfilePicture] = useState('https://via.placeholder.com/100');
     const [activeSection, setActiveSection] = useState('details');
     const navigate = useNavigate();
 
@@ -29,6 +32,21 @@ const Profile = () => {
         navigate('/login'); // Redirect to login page
     };
 
+    const handleFileChange = (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            // For demonstration, let's just use the file URL
+            const imageUrl = URL.createObjectURL(file);
+            setProfilePicture(imageUrl);
+            toast.success('Profile picture updated!');
+        }
+    };
+
+    const handleWishlistClick = () => {
+        // Redirect to the cart page
+        navigate('/cart');
+    };
+
     return (
         <div className="profile-container">
             <div className="profile-sidenav">
@@ -36,20 +54,40 @@ const Profile = () => {
                 <ul>
                     <li onClick={() => setActiveSection('details')}>My Details</li>
                     <li onClick={() => setActiveSection('orders')}>Orders</li>
-                    <li onClick={() => setActiveSection('wishlist')}>My Wishlist</li>
+                    <li onClick={handleWishlistClick}>My Wishlist</li>
                     <li onClick={() => setActiveSection('notifications')}>Notifications</li>
                     <li onClick={handleLogout}>Logout</li>
                 </ul>
             </div>
             <div className="profile-content">
-                {activeSection === 'details' && (
+                <CSSTransition
+                    in={activeSection === 'details'}
+                    timeout={300}
+                    classNames="fade"
+                    unmountOnExit
+                >
                     <div className="profile-details">
                         <h2>Personal Information</h2>
+                        <div className="profile-header">
+                            <img src={profilePicture} alt="Profile" className="profile-picture" />
+                            <input
+                                type="file"
+                                id="profile-picture-upload"
+                                style={{ display: 'none' }}
+                                onChange={handleFileChange}
+                            />
+                            <button
+                                className="upload-button"
+                                onClick={() => document.getElementById('profile-picture-upload').click()}
+                            >
+                                Upload Picture
+                            </button>
+                        </div>
                         <p><strong>Email:</strong> {user.email}</p>
                         <p><strong>First Name:</strong> {user.firstName}</p>
                         <p><strong>Last Name:</strong> {user.lastName}</p>
                         <p><strong>Phone:</strong> {user.phone}</p>
-                        <h2>Addresses</h2>
+                        <h2>Address</h2>
                         {user.addresses.length > 0 ? (
                             user.addresses.map((address, index) => (
                                 <div key={index} className="address-card">
@@ -63,27 +101,42 @@ const Profile = () => {
                         ) : (
                             <p>No addresses available.</p>
                         )}
-                        <button onClick={() => navigate('/addaddress')}>Add Address</button>
+                        <button className="edit-button" onClick={() => navigate('/add-address')}>Add Address</button>
                     </div>
-                )}
-                {activeSection === 'orders' && (
+                </CSSTransition>
+                <CSSTransition
+                    in={activeSection === 'orders'}
+                    timeout={300}
+                    classNames="fade"
+                    unmountOnExit
+                >
                     <div className="profile-orders">
                         <h2>My Orders</h2>
                         <p>Order history will be displayed here.</p>
                     </div>
-                )}
-                {activeSection === 'wishlist' && (
+                </CSSTransition>
+                <CSSTransition
+                    in={activeSection === 'wishlist'}
+                    timeout={300}
+                    classNames="fade"
+                    unmountOnExit
+                >
                     <div className="profile-wishlist">
                         <h2>My Wishlist</h2>
                         <p>Wishlist items will be displayed here.</p>
                     </div>
-                )}
-                {activeSection === 'notifications' && (
+                </CSSTransition>
+                <CSSTransition
+                    in={activeSection === 'notifications'}
+                    timeout={300}
+                    classNames="fade"
+                    unmountOnExit
+                >
                     <div className="profile-notifications">
                         <h2>Notifications</h2>
                         <p>Notification settings will be displayed here.</p>
                     </div>
-                )}
+                </CSSTransition>
             </div>
         </div>
     );

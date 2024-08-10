@@ -1,0 +1,67 @@
+/* src/assets/css/AddAddress.css */
+
+.add-address-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+    padding: 20px;
+    background: url("../../assets/images/3775146.jpg") no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Ensure the image covers the entire background */
+}
+
+.add-address-form-container {
+    background-color: rgba(65, 65, 65, 0.9); /* Semi-transparent white background for readability */
+    padding: 20px;
+    border-radius: 8px; /* Adjust radius if needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Set a fixed max-width for the container */
+    position: relative; /* Ensure it does not affect other elements */
+    margin: auto; /* Center the container horizontally */
+}
+
+.heading {
+    text-align: center;
+    font-size: 1.5rem; /* Adjust size if needed */
+    font-weight: bold;
+    text-transform: capitalize; /* Capitalize only the first letter */
+    margin-bottom: 15px; /* Adjust margin if needed */
+}
+
+.add-address-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.add-address-form input {
+    margin-bottom: 12px; /* Adjust space between inputs if needed */
+    padding: 10px;
+    border: 1px solid #ccc; /* Use a default border color */
+    border-radius: 4px; /* Adjust radius if needed */
+    font-size: 16px;
+    transition: all 0.3s ease; /* Smooth transition for focus and hover */
+}
+
+.add-address-form input:focus {
+    border-color: #28a745; /* Green border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Shadow effect on focus */
+}
+
+.add-address-form button {
+    background-color: #28a745; /* Green color */
+    color: #ffffff; /* White text color */
+    border: none;
+    padding: 10px 15px; /* Adjust padding if needed */
+    border-radius: 4px; /* Adjust radius if needed */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add scale effect on hover */
+}
+
+.add-address-form button:hover {
+    background-color: #218838; /* Darker green for hover effect */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}

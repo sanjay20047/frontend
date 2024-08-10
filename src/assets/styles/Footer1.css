@@ -48,7 +48,7 @@
 /* Bubble Effect Styles */
 .footer .bubbles {
     position: absolute;
-    top: -3rem; /* Move bubbles slightly above the footer */
+    top: 0; /* Adjusted to fit better into the page */
     left: 0;
     right: 0;
     height: 12rem; /* Cover the footer height */
@@ -70,8 +70,8 @@
 /* Bubble Keyframes */
 @keyframes bubble-size {
     0%, 75% {
-        width: var(--size, 4rem);
-        height: var(--size, 4rem);
+        width: var(--size, 1.5rem); /* Smaller size */
+        height: var(--size, 1.5rem); /* Smaller size */
     }
     100% {
         width: 0rem;
@@ -84,7 +84,7 @@
         bottom: -4rem;
     }
     100% {
-        bottom: var(--distance, 10rem);
+        bottom: var(--distance, 5rem); /* Adjusted distance */
     }
 }
 

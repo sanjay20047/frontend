@@ -1,0 +1,39 @@
+/* Container for the entire Thanks page */
+.thanks-container {
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #000000; /* Background color */
+    color: #ffffff; /* Text color */
+    padding: 1rem;
+    gap: 2rem; /* Space between map and text */
+  }
+  
+  /* Map container */
+  .map-container {
+    width: 700px; /* Fixed width for a square map */
+    height: 450px; /* Fixed height to make it a square */
+    border-radius: 10px; /* Optional: rounded corners */
+    overflow: hidden; /* Hide overflow to maintain square shape */
+  }
+  
+  /* Text content container */
+  .text-content {
+    text-align: center; /* Center text horizontally */
+  }
+  
+  /* Heading */
+  .thanks-container h1 {
+    font-size: 2rem;
+    color: #9819b8; /* Color for the thank you message */
+    margin-bottom: 20px;
+  }
+  
+  /* Paragraph */
+  .thanks-container p {
+    font-size: 1.2rem;
+    color: #ffffff; /* Color for the message */
+  }
+  

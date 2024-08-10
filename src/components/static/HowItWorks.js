@@ -1,8 +1,15 @@
 import React from 'react';
 import '../../assets/styles/HowItWorks.css'; // Ensure this CSS file exists
 import hiw from '../../assets/images/vectorizer.svg';
+import { useNavigate } from 'react-router-dom'; // Corrected import
 
 const HowItWorks = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/scroll');
+  };
+
   return (
     <div id="what-we-do" className="how-it-works">
       <div className="content-container">
@@ -12,10 +19,11 @@ const HowItWorks = () => {
           className="how-it-works-image" 
         />
         <div className="text-container">
-          <h2 className="section-title">What we do?</h2>
+          <h2 className="section-title">What We Do?</h2>
           <p className="section-description">
-            We provide a platform where you can easily submit your waste for recycling. Our mission is to promote environmental sustainability by ensuring that waste is properly collected and sent to recycling plants. By participating, you not only help the environment but also earn rewards that can be converted into money or used to purchase products from our shop.
+            Our service provides a seamless way to manage your waste with eco-friendly practices. We offer convenient scheduling, reward systems, and a commitment to reducing environmental impact. By choosing us, you contribute to a cleaner and greener community.
           </p>
+          <button onClick={handleButtonClick}>Learn More</button>
         </div>
       </div>
     </div>

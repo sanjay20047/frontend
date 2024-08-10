@@ -1,0 +1,136 @@
+/* src/assets/styles/Cart.css */
+
+#cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #141313; /* Match the background color */
+    min-height: 100vh;
+}
+
+#cart h2 {
+    color: #fff; /* Adjust text color */
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+#cart .cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+#cart .cart-item {
+    box-shadow: rgba(0, 128, 0, 0.117647) 0px 1px 6px, rgba(0, 128, 0, 0.117647) 0px 1px 4px;
+    width: 220px;
+    margin: 16px;
+    padding: 12px;
+    background-color: #1c1c1c; /* Match card background color */
+    text-align: center;
+    color: #fff; /* Match text color */
+    overflow: hidden; /* Ensure content does not overflow */
+    position: relative; /* For positioning the remove button */
+    padding-bottom: 60px; /* Add padding to accommodate the button */
+}
+
+#cart .cart-item img {
+    max-width: 100%; /* Ensure image fits within its container */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px;
+}
+
+#cart .cart-item p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+#cart .cart-item small {
+    font-size: 14px;
+    color: #ccc; /* Adjust color for small text */
+}
+
+#cart .quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+#cart .quantity-btn {
+    background-color: #4caf50; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 5px;
+    user-select: none; /* Prevent text selection */
+}
+
+#cart .quantity-btn:hover {
+    background-color: #45a049; /* Button hover color */
+}
+
+#cart .remove-btn {
+    background-color: #b82e2e; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    position: absolute; /* Positioning the button inside the cart-item */
+    bottom: 10px; /* Adjust to fit within the card */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 10; /* Ensure button is on top of other elements */
+}
+
+#cart .remove-btn:hover {
+    background-color: #a12323; /* Button hover color */
+}
+
+#cart .cart-total1 {
+    margin-top: 42px; /* Adjust margin to separate from items */
+    color: #b82e2e; /* Adjust text color */
+    font-size: 24px; /* Adjust font size for subtotal */
+}
+/* src/assets/styles/Cart.css */
+
+
+/* src/assets/styles/Cart.css */
+
+/* Existing styles */
+
+#cart .cart-total1 {
+    margin-top: 20px; /* Adjust margin to separate from items */
+    color: #b82e2e; /* Adjust text color */
+    font-size: 24px; /* Adjust font size for subtotal */
+    text-align: center; /* Center align the text and button */
+}
+
+#cart .checkout-btn {
+    background-color: #4caf50; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    padding: 14px 8px; /* Adjust padding */
+    font-size: 16px; /* Smaller font size */
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 6px;
+    display: inline-block;
+    width: 165px; /* Fixed width for button */
+    text-align: center; /* Center text */
+}
+
+#cart .checkout-btn:hover {
+    background-color: #45a049; /* Button hover color */
+}
+
+
+
+
+

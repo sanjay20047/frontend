@@ -1,3 +1,5 @@
+/* src/assets/styles/Shop.css */
+
 #app {
   display: flex;
   align-items: center;
@@ -6,7 +8,7 @@
   margin-top: 16px;
   margin-bottom: 16px;
   width: 100%;
-  background-color: black;
+  background-color: black; /* Background color of the whole app */
 }
 
 #app .search-wrapper {
@@ -19,29 +21,29 @@
 #app .search-wrapper label {
   position: absolute;
   font-size: 14px;
-  color: rgba(196, 20, 254, 0.6); /* Changed to green */
+  color: rgba(196, 20, 254, 0.6); /* Adjust color */
   top: 12px;
   left: 12px;
-  transition: .2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
   pointer-events: none;
 }
 
 #app .search-wrapper input {
   width: 100%;
   padding: 14px 12px;
-  color: #e032e3;
-  border: 1px solid rgba(0, 128, 0, .15); /* Changed to green */
+  color: #e032e3; /* Input text color */
+  border: 1px solid rgba(0, 128, 0, 0.15); /* Border color */
   border-radius: 4px;
-  transition: .2s all ease-in-out;
-  background: #141313; /* Changed to white */
+  transition: 0.2s all ease-in-out;
+  background: #141313; /* Background color of input */
   font-size: 16px;
 }
 
 #app .search-wrapper input:focus {
   outline: none;
-  border-color: #b326ea; /* Changed to green */
-  background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 128, 0, .1); /* Changed to green */
+  border-color: #b326ea; /* Border color on focus */
+  background: #fff; /* Background color on focus */
+  box-shadow: 0 4px 8px rgba(0, 128, 0, 0.1); /* Box shadow on focus */
 }
 
 #app .search-wrapper input:focus + label,
@@ -49,7 +51,7 @@
   top: -8px;
   left: 10px;
   font-size: 12px;
-  color: #ac3ef5; /* Changed to green */
+  color: #ac3ef5; /* Adjust color */
   background: rgb(0, 0, 0);
   padding: 0 4px;
 }
@@ -67,24 +69,25 @@
 }
 
 #app .card {
-  box-shadow: rgba(0, 128, 0, 0.117647) 0px 1px 6px, rgba(0, 128, 0, 0.117647) 0px 1px 4px; /* Changed to green */
+  box-shadow: rgba(0, 128, 0, 0.117647) 0px 1px 6px, rgba(0, 128, 0, 0.117647) 0px 1px 4px; /* Box shadow for cards */
   width: 220px; 
   margin: 16px; 
-  transition: .15s all ease-in-out;
+  padding: 12px;
+  background-color: #1c1c1c; /* Background color of cards */
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  transition: transform 0.15s ease-in-out;
 }
 
 #app .card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05); /* Slightly zoom in on hover */
 }
 
 #app .card a {
   text-decoration: none;
-  padding: 12px;
-  color: #b830f7; /* Changed to green */
+  color: #b830f7; /* Text color */
   font-size: 18px;
   display: flex;
   flex-direction: column;
@@ -93,11 +96,46 @@
 
 #app .card img {
   height: 150px;
+  width: auto; /* Ensure the image maintains aspect ratio */
   margin-bottom: 10px;
 }
 
 #app .card small {
   font-size: 12px;
   padding: 4px;
-  color: #fff;
+  color: #fff; /* Small text color */
+}
+
+#app .cart-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Adjust as needed for spacing */
+}
+
+#app .cart-icon {
+  font-size: 24px;
+  color: #e032e3; /* Adjust color */
+  cursor: pointer;
+}
+
+#app .cart-quantity {
+  position: relative;
+  top: -10px; /* Adjust this value to position the badge above the cart icon */
+  right: -10px; /* Adjust this value to ensure proper placement */
+  background-color: #b326ea; /* Background color for quantity badge */
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+/* Ensure the quantity badge appears above the cart icon */
+#app .cart-container .cart-quantity {
+  top: -20px; /* Adjust this value to position the badge properly */
+  right: -10px; /* Adjust this value for alignment */
 }

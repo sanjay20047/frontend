@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
-import backgroundImage from '../../assets/images/3775146.jpg'; // Import your background image
+import axios from 'axios';
+import { motion } from 'framer-motion';
+import bgVideo from '../../assets/videos/home.mp4'; // Import your background video
 
 // Styled components
 const Container = styled(motion.div)`
@@ -10,19 +11,30 @@ const Container = styled(motion.div)`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url(${backgroundImage}) no-repeat center center fixed;
-  background-size: cover;
   overflow: hidden;
+  position: relative; /* Ensure Container is relative for absolute positioning of video */
+`;
+
+const VideoBackground = styled.video`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure video covers the container */
+  z-index: -1; /* Place video behind other content */
 `;
 
 const FormContainer = styled(motion.div)`
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   max-width: 400px;
   width: 100%;
   position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: adds a subtle border for more glass effect */
 `;
 
 const Title = styled.h2`
@@ -128,11 +140,23 @@ const Login = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
-    // Handle login logic here
-    navigate('/profile');
+
+    try {
+      // Make a POST request to the backend for login
+      const response = await axios.post('http://localhost:8080/api/login', {
+        email,
+        password
+      });
+
+      if (response.status === 200) {
+        navigate('/'); // Redirect to profile page on successful login
+      }
+    } catch (err) {
+      setError('Login failed. Please check your credentials and try again.');
+    }
   };
 
   const handleButtonClick = (e) => {
@@ -158,6 +182,9 @@ const Login = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
+      <VideoBackground autoPlay loop muted>
+        <source src={bgVideo} type="video/mp4" />
+      </VideoBackground>
       <FormContainer
         initial={{ y: -30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -202,7 +229,7 @@ const Login = () => {
           </Button>
         </form>
         <LoginLinks>
-          <LinkStyled href="/forgotpassword">Forgot Password?</LinkStyled>
+          <LinkStyled href="/forgotpass">Forgot Password?</LinkStyled>
           <LinkStyled href="/register">Create an Account</LinkStyled>
         </LoginLinks>
       </FormContainer>

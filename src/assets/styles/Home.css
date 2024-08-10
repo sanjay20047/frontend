@@ -9,31 +9,52 @@
 
 /* Hero Container Styles */
 .hero-container {
-  display: flex; /* Use flexbox for alignment */
-  flex-direction: column; /* Stack content vertically */
-  align-items: flex-end; /* Align items to the start (left) */
-  justify-content: center; /* Center content vertically */
-  text-align: right; /* Align text to the left */
-  padding: 120px;
-  background-image: url('../../assets/images/home9.jpg'); /* Set your background image here */
-  background-size: cover; /* Ensure the image covers the container */
-  background-position: center; /* Center the background image */
-  color: rgba(220, 218, 220, 0.932); /* White text color for contrast */
-  border-radius: 10px; /* Optional: rounded corners for the container */
-  margin-bottom: 20px; /* Space below the container */
-  max-width: 100%; /* Ensure it doesn’t overflow */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align items to the end (right) */
+  justify-content: flex-start; /* Align content to the top */
+  text-align: right;
+  padding: 20px; /* Adjust padding as needed */
+  background-size: cover;
+  background-position: center;
+  color: rgba(255, 255, 255, 0.932);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  max-width: 100%;
+  height: 350px;
+  z-index: 1;
 }
 
+/* Background Video Styles */
+.hero-container video {
+  position: absolute; /* Position video behind text */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0; /* Ensure video is behind text */
+}
+
+/* Hero Container Heading */
 .hero-container h1 {
+  z-index: 2; /* Ensure heading is above the background video */
   font-size: 2.5rem;
-  margin-bottom: 10px;
+  margin: 230px 0 0 0; /* Increased top margin to push heading further down */
+  position: relative; /* Ensure z-index applies correctly */
 }
 
+/* Hero Container Slogan */
 .hero-container p.slogan {
-  font-size: 1.75rem; /* Increased font size for slogan */
+  z-index: 2; /* Ensure slogan is above the background video */
+  font-size: 1.75rem;
   font-weight: bold;
-  margin: 0; /* Remove default margins */
-  color:rgba(236, 29, 254, 0.71);
+  margin: 0; /* Adjust margin as needed */
+  color: rgba(186, 14, 248, 0.71);
+  position: relative; /* Ensure z-index applies correctly */
+  margin-top: 1px; /* Added top margin to separate from heading */
 }
 
 /* Description Styles */
@@ -59,7 +80,9 @@
   flex: 1; 
   margin: 0;
   font-family: 'Roboto' sans-serif;
-  font-weight: lighter;
+  font-weight: bold;
+  color: ;
+
   
 } 
 
@@ -95,6 +118,7 @@
 
   .hero-container h1 {
       font-size: 2rem;
+      margin: 50px 0 15px 0; /* Adjusted margin for smaller screens */
   }
 
   .hero-container p.slogan {

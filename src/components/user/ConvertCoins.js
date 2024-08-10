@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import '../../assets/styles/ConvertCoins.css';
-import credit from '../../assets/images/credit.jpg';
-import bitcoin from '../../assets/images/bitcoin.jpg';
-import paypal from '../../assets/images/paypal.webp';
+import credit from '../../assets/images/razor.jpeg';
+import bitcoin from '../../assets/images/money.webp';
 
-const FIXED_CONVERSION_RATE = 100; // Conversion rate is fixed
+const FIXED_CONVERSION_RATE = 30; // Conversion rate is fixed
 
 const ConvertCoins = () => {
   const [coins, setCoins] = useState(1); // Default value is 1
@@ -43,24 +42,17 @@ const ConvertCoins = () => {
         <h2>Payment Options</h2>
         <div className="payment-cards">
           <div className="payment-card">
-            <input type="radio" id="credit-card" name="payment-method" value="credit-card" />
+            <input type="radio" id="Razor-pay" name="payment-method" value="Razor-pay" />
             <label htmlFor="credit-card">
-              <img src={credit} alt="Credit Card" />
-              <span>Credit Card</span>
+              <img src={credit} alt="Razor-pay" />
+              <span>Razor Pay</span>
             </label>
           </div>
           <div className="payment-card">
-            <input type="radio" id="paypal" name="payment-method" value="paypal" />
-            <label htmlFor="paypal">
-              <img src={paypal} alt="PayPal" />
-              <span>PayPal</span>
-            </label>
-          </div>
-          <div className="payment-card">
-            <input type="radio" id="crypto" name="payment-method" value="crypto" />
-            <label htmlFor="crypto">
-              <img src={bitcoin} alt="Cryptocurrency" />
-              <span>Cryptocurrency</span>
+            <input type="radio" id="cash" name="payment-method" value="cash" />
+            <label htmlFor="cash">
+              <img src={bitcoin} alt="cash" />
+              <span>Recieve Cash</span>
             </label>
           </div>
         </div>

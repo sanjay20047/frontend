@@ -1,20 +1,21 @@
-/* src/assets/css/Profile.css */
-
 :root {
-  --background: #000000;
-  --foreground: #d957f3;
-  --muted: #000000;
-  --border: #ba28eb;
-  --hover: #582323;
-  --primary: #af4c70;
-  --primary-foreground: #d540e6;
-  --radius: 8px;
-  --font-family: Arial, sans-serif;
+  --background: #1f1f1f;
+  --foreground: #f1f1f1;
+  --muted: #2c2c2c;
+  --border: #6c63ff;
+  --hover: #4e4e4e;
+  --primary: #81017a;
+  --primary-foreground: #ffffff;
+  --radius: 40px;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Apply font family to all elements */
 * {
   font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Profile Container */
@@ -27,17 +28,19 @@
 
 /* Side Navigation */
 .profile-sidenav {
-  width: 250px;
+  width: 260px;
   background-color: var(--muted);
   padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 0 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
+  transition: width 0.3s ease;
 }
 
 .profile-sidenav h2 {
   margin-top: 0;
   font-weight: bold;
+  color: var(--primary);
 }
 
 .profile-sidenav ul {
@@ -50,17 +53,19 @@
   padding: 15px;
   cursor: pointer;
   border-bottom: 1px solid var(--border);
+  transition: background-color 0.3s ease;
 }
 
 .profile-sidenav li:hover {
   background-color: var(--hover);
-  transition: background-color 0.3s ease;
 }
 
 /* Profile Content */
 .profile-content {
   flex: 1;
   padding: 20px;
+  overflow-y: auto;
+  position: relative;
 }
 
 /* Profile Details, Orders, Wishlist, Notifications */
@@ -71,35 +76,97 @@
   background-color: var(--muted);
   padding: 20px;
   border-radius: var(--radius);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-out;
+  line-height: 30px;
+  margin-bottom: 30px; /* Increased margin-bottom for spacing between sections */
 }
+.profile-details h2{
+  color: rgb(146, 4, 182);
+  line-height: 50px;
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.upload-button {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border: none;
+  padding: 6px 12px; /* Smaller padding */
+  border-radius: var(--radius);
+  font-size: 12px; /* Smaller font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+  background-color: #644747;
+}
+
 
 /* Address Card */
 .address-card {
   background-color: var(--background);
-  padding: 15px;
+  padding: 20px; /* Reduced padding for more compact view */
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  margin-bottom: 10px;
+  margin-bottom: 20px; /* Increased margin-bottom for spacing */
+  line-height: 2; /* Increased line-height for better readability */
 }
 
 /* Buttons */
 .edit-button,
-.add-address-button,
-.edit-button {
+.add-address-button {
   background-color: var(--primary);
   color: var(--primary-foreground);
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: var(--radius);
   font-size: 16px;
   cursor: pointer;
-  margin: 5px;
+  margin: 10px 0;
   transition: background-color 0.3s ease;
 }
 
 .edit-button:hover,
-.add-address-button:hover,
-.edit-button:hover {
-  background-color: #45a049;
+.add-address-button:hover {
+  background-color: #575757;
+}
+
+/* Animations */
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

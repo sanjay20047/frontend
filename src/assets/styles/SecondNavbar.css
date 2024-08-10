@@ -1,0 +1,31 @@
+.second-navbar {
+    background-color: #000000; /* Dark background */
+    color: #fff; /* White text color */
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+    height: 40px; /* Adjust height as needed */
+  }
+  
+  .second-nav-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .second-nav-items li {
+    margin: 0 15px;
+  }
+  
+  .second-nav-items li a {
+    color: #fff; /* White text color */
+    text-decoration: none;
+    font-weight: bold;
+
+  }
+  
+  .second-nav-items li a:hover {
+    color: #4caf50; /* Change color on hover */
+  }
+  

@@ -5,13 +5,13 @@ const Footer1 = () => {
     return (
         <div className="footer">
             <div className="bubbles">
-                {Array.from({ length: 128 }).map((_, i) => (
+                {Array.from({ length: 64 }).map((_, i) => (
                     <div
                         key={i}
                         className="bubble"
                         style={{
-                            '--size': `${2 + Math.random() * 4}rem`,
-                            '--distance': `${6 + Math.random() * 4}rem`,
+                            '--size': `${0.5 + Math.random() * 1}rem`, // Smaller size
+                            '--distance': `${3 + Math.random() * 2}rem`, // Adjusted distance
                             '--position': `${-5 + Math.random() * 110}%`,
                             '--time': `${2 + Math.random() * 2}s`,
                             '--delay': `${-1 * (2 + Math.random() * 2)}s`
