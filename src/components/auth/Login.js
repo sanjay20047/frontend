@@ -12,7 +12,7 @@ const Container = styled(motion.div)`
   align-items: center;
   height: 100vh;
   overflow: hidden;
-  position: relative; /* Ensure Container is relative for absolute positioning of video */
+  position: relative;
 `;
 
 const VideoBackground = styled.video`
@@ -21,20 +21,20 @@ const VideoBackground = styled.video`
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensure video covers the container */
-  z-index: -1; /* Place video behind other content */
+  object-fit: cover;
+  z-index: -1;
 `;
 
 const FormContainer = styled(motion.div)`
-  background: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
-  backdrop-filter: blur(10px); /* Frosted glass effect */
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   max-width: 400px;
   width: 100%;
   position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: adds a subtle border for more glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.2);
 `;
 
 const Title = styled.h2`
@@ -145,7 +145,15 @@ const Login = () => {
     setError('');
 
     try {
-      // Make a POST request to the backend for login
+      // Check if email is for admin login
+      if (email === 'admin@gmail.com'& password=='admin') {
+        // Admin login logic
+        // For simplicity, directly navigate to AdminDashboard if admin email is used
+        navigate('/admindashboard');
+        return;
+      }
+
+      // Make a POST request to the backend for regular login
       const response = await axios.post('http://localhost:8080/api/login', {
         email,
         password

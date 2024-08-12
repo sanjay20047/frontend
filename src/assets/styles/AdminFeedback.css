@@ -1,0 +1,30 @@
+.admin-feedback {
+    padding: 20px;
+  }
+  
+  .admin-feedback h2 {
+    margin-bottom: 20px;
+  }
+  
+  .admin-feedback table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .admin-feedback th, .admin-feedback td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .admin-feedback th {
+    background-color: #000000;
+  }
+  
+  .admin-feedback tr:nth-child(even) {
+    background-color: #000000;
+  }
+  
+  .admin-feedback tr:hover {
+    background-color: #000000;
+  }
+  

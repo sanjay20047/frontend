@@ -1,0 +1,30 @@
+.admin-job-applications {
+    padding: 20px;
+  }
+  
+  .admin-job-applications h2 {
+    margin-bottom: 20px;
+  }
+  
+  .admin-job-applications table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .admin-job-applications th, .admin-job-applications td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .admin-job-applications th {
+    background-color: #000000;
+  }
+  
+  .admin-job-applications tr:nth-child(even) {
+    background-color: #000000;
+  }
+  
+  .admin-job-applications tr:hover {
+    background-color: #000000;
+  }
+  

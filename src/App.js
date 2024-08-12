@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+// src/App.js
+import React, { useState } from 'react'; // Import useState
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import Home from './components/static/Home';
@@ -18,19 +19,23 @@ import Footer1 from './components/common/Footer1';
 import Scroll from './components/static/Scroll';
 import Thanks from './components/user/Thanks';
 import ForgotPassword from './components/auth/ForgotPassword';
-import Cart from './components/user/Cart'; // Import Cart component
-import AddAddress from './components/user/AddAddress'; // Import AddAddress component
+import Cart from './components/user/Cart';
+import AddAddress from './components/user/AddAddress';
 import Payment from './components/user/Payment';
 import Feedback from './components/user/Feedback';
 import Job from './components/user/Job';
 import ContactUs from './components/static/ContactUs';
+import AdminDashboard from './components/admin/AdminDashboard';
+import UserManagement from './components/admin/UserManagement';
+import AdminFeedback from './components/admin/AdminFeedback';
+import AdminJobApplications from './components/admin/AdminJobApplications';
+import WasteManagement from './components/admin/WasteManagement';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false); // Placeholder for login state
   const location = useLocation();
 
-  // Determine if Navbar should be shown based on the current route
-  const showNavbar = !['/login', '/register', '/forgotpass'].includes(location.pathname);
+  const showNavbar = !['/login', '/register', '/forgotpass', '/admindashboard', '/user', '/feed','/jobapp', '/wastemanage'].includes(location.pathname);
 
   return (
     <div>
@@ -49,7 +54,7 @@ const App = () => {
             { date: '2023-07-24', amount: 10, type: 'Shared Solution' }
           ]} />} />
           <Route path="/shop" element={<Shop />} />
-          <Route path="/cart" element={<Cart />} /> {/* Add this route */}
+          <Route path="/cart" element={<Cart />} />
           <Route path="/mysubmission" element={<MySubmission />} />
           <Route path="/submitwaste" element={<SubmitWaste />} />
           <Route path="/resident" element={<Resident />} />
@@ -64,7 +69,11 @@ const App = () => {
           <Route path="/feedback" element={<Feedback />} />   
           <Route path="/job" element={<Job />} />  
           <Route path="/contactus" element={<ContactUs />} />  
-           {/* Add this route */}
+          <Route path="/admindashboard/*" element={<AdminDashboard />} />  
+          <Route path="user*" element={<UserManagement/>} />  
+          <Route path="/feed" element={<AdminFeedback/>} />  
+          <Route path="/jobapp" element={<AdminJobApplications/>} />  
+          <Route path="/wastemanage" element={<WasteManagement/>} /> 
         </Routes>
       </div>
     </div>

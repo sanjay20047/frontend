@@ -1,0 +1,42 @@
+.waste-management {
+    padding: 20px;
+  }
+  
+  .waste-management h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffffff;
+  }
+  
+  .waste-management table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .waste-management th,
+  .waste-management td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .waste-management th {
+    background-color: #000000;
+    color: white;
+  }
+  
+  .waste-management tr:nth-child(even) {
+    background-color: #000000;
+  }
+  
+  .waste-management tr:hover {
+    background-color: #ddd;
+  }
+  
+  .waste-management .no-data {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+    padding: 20px;
+  }
+  

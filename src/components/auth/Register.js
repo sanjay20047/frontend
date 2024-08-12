@@ -159,7 +159,7 @@ const Register = () => {
       });
       // Handle successful registration
       console.log(response.data);
-      navigate('/profile');
+      navigate('/login');
     } catch (error) {
       // Handle error
       console.error('Error during registration:', error.response ? error.response.data : error.message);
